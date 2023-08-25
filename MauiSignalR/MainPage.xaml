@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiSignalR.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                x:Name="chatMessages"
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="Red"
+                />
+            <Entry x:Name="Grupo"></Entry>
+            <Button Text="Agregar" Clicked="Button_Clicked"></Button>
+
+            <Entry
+                x:Name="myChatMessage"
+                Placeholder="Type your message"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Completed="myChatMessage_Completed"
+                TextChanged="myChatMessage_TextChanged"
+                ClearButtonVisibility="WhileEditing"/>
+            <Label x:Name="Result" ></Label>
+
+            <Button
+                x:Name="sendButton"
+                Text="Send"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
